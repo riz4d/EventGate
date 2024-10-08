@@ -7,11 +7,40 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
-const BackgroundBubble = ({ delay }: { delay: number }) => (
+import { Laptop, Code, Lightbulb, Users, Computer, Smartphone, Coffee, Clock, Trophy } from 'lucide-react'
+
+const AnimatedIcon = ({ icon: Icon, delay }: { icon: React.ElementType, delay: number }) => (
   <motion.div
-    className="absolute rounded-full bg-blue-300 opacity-20"
-    initial={{ scale: 0 }}
-    animate={{ scale: 1 }}
+    className="absolute text-gray-500 opacity-20"
+    initial={{ scale: 0, rotate: 0 }}
+    animate={{ 
+      scale: [1, 1.2, 1],
+      rotate: [0, 360],
+      y: [0, -20, 0]
+    }}
+    transition={{
+      duration: 5,
+      delay,
+      repeat: Infinity,
+      repeatType: 'loop'
+    }}
+    style={{
+      top: `${Math.random() * 80 + 10}%`,
+      left: `${Math.random() * 80 + 10}%`,
+    }}
+  >
+    <Icon size={48} />
+  </motion.div>
+)
+
+const AnimatedText = ({ text, delay }: { text: string, delay: number }) => (
+  <motion.div
+    className="absolute text-gray-500 opacity-20 font-bold text-2xl"
+    initial={{ opacity: 0 }}
+    animate={{ 
+      opacity: [0.2, 0.5, 0.2],
+      scale: [1, 1.1, 1],
+    }}
     transition={{
       duration: 4,
       delay,
@@ -19,12 +48,12 @@ const BackgroundBubble = ({ delay }: { delay: number }) => (
       repeatType: 'reverse'
     }}
     style={{
-      width: Math.random() * 100 + 50,
-      height: Math.random() * 100 + 50,
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 80 + 10}%`,
+      left: `${Math.random() * 80 + 10}%`,
     }}
-  />
+  >
+    {text}
+  </motion.div>
 )
 
 export default function EventRegistrationForm() {
@@ -50,14 +79,21 @@ export default function EventRegistrationForm() {
     console.log('Form submitted:', formState)
     // Here you would typically send the form data to your backend
   }
-
+  const techIcons = [Laptop, Code, Smartphone, Computer, Lightbulb, Users, Code, Coffee, Clock, Trophy, Code, Smartphone, Computer]
+  const techTexts = ['Innovate', 'Create', 'Collaborate', 'Learn', 'Build', 'Hack', 'Innovate', 'Create', 'Collaborate', 'Learn', 'Build', 'Hack', 'Innovate', 'Create', 'Collaborate', 'Learn', 'Build', 'Hack', 'Innovate', 'Create', 'Collaborate', 'Learn', 'Build', 'Hack']
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      {techIcons.map((Icon, i) => (
+        <AnimatedIcon key={`icon-${i}`} icon={Icon} delay={i * 0.5} />
+      ))}
+      {techTexts.map((text, i) => (
+        <AnimatedText key={`text-${i}`} text={text} delay={i * 0.7} />
+      ))}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-2xl"
+        className="w-full max-w-lg p-8 space-y-8 bg-white rounded-lg shadow-2xl"
       >
         <motion.h2
           initial={{ opacity: 0 }}
