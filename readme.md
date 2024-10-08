@@ -6,7 +6,6 @@ EventGate is a project designed to manage and streamline event handling and proc
 
 - Efficient event management
 - Real-time event processing
-- Scalable architecture
 
 ## Installation
 
