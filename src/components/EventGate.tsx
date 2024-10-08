@@ -7,6 +7,26 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
+const BackgroundBubble = ({ delay }: { delay: number }) => (
+  <motion.div
+    className="absolute rounded-full bg-blue-300 opacity-20"
+    initial={{ scale: 0 }}
+    animate={{ scale: 1 }}
+    transition={{
+      duration: 4,
+      delay,
+      repeat: Infinity,
+      repeatType: 'reverse'
+    }}
+    style={{
+      width: Math.random() * 100 + 50,
+      height: Math.random() * 100 + 50,
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+    }}
+  />
+)
+
 export default function EventRegistrationForm() {
   const [formState, setFormState] = useState({
     fullname: '',
