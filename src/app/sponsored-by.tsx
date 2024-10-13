@@ -11,7 +11,6 @@ const SPONSORS = [
   "diamond",
 ];
 
-
 export function SponsoredBy() {
   return (
     <motion.div
@@ -21,7 +20,7 @@ export function SponsoredBy() {
     >
       <section className="py-8 px-8 lg:py-20">
         <div className="container mx-auto text-center">
-          <Typography variant="h5" color="blue-gray" className="mb-8">
+          <Typography variant="h5" color="textPrimary" className="mb-8">
             PARTNERS OF 2024
           </Typography>
           <div className="flex flex-wrap items-center justify-center gap-6">
@@ -30,9 +29,8 @@ export function SponsoredBy() {
                 width={256}
                 height={256}
                 key={key}
-                src={`/logos/logo-${logo}.png`}
-                alt={logo}
-                className="w-40"
+                src={`/images/${logo}.png`}
+                alt={`${logo} logo`}
               />
             ))}
           </div>
