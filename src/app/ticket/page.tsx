@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 const TicketComponent = () => {
   const [ticketData, setTicketData] = useState(null);
   const [error, setError] = useState(null);
-  const [url, setUrl] = useState('');
+  const [url, setUrl] = useState(''); // eslint-disable-line @typescript-eslint/no-unused-vars
   const [id, setId] = useState('');
 
   useEffect(() => {
