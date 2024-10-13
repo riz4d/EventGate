@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 const TicketComponent = () => {
   const [ticketData, setTicketData] = useState(null);
   const [error, setError] = useState(null);
-  const [setUrl] = useState('');
+  const setUrl = useState('');
   const [id, setId] = useState('');
 
   useEffect(() => {
