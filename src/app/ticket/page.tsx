@@ -33,8 +33,12 @@ const TicketComponent = () => {
         const response = await fetch(`http://172.20.10.7:80/api/ticket?id=${id}`);
         const data = await response.json();
         setTicketData(data);
-      } catch (error: any) {
-        setError(error.message);
+      } catch (error) {
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError('An unknown error occurred');
+        }
       }
     };
 
