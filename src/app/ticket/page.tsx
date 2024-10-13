@@ -6,8 +6,13 @@ import { CalendarDays, Clock, MapPin, User, Mail, UserCheck, Ticket } from "luci
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+interface TicketData {
+  eventName: string;
+  // Add other properties as needed
+}
+
 const TicketComponent = () => {
-  const [ticketData, setTicketData] = useState(null);
+  const [ticketData, setTicketData] = useState<TicketData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [url, setUrl] = useState(''); // eslint-disable-line @typescript-eslint/no-unused-vars
   const [id, setId] = useState('');
@@ -31,7 +36,7 @@ const TicketComponent = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(`http://172.20.10.7:80/api/ticket?id=${id}`);
-        const data = await response.json();
+        const data: TicketData = await response.json();
         setTicketData(data);
       } catch (error) {
         if (error instanceof Error) {
