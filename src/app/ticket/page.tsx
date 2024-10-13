@@ -4,11 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, Clock, MapPin, User, Mail, UserCheck, Ticket } from "lucide-react";
 import React, { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 const TicketComponent = () => {
   const [ticketData, setTicketData] = useState(null);
   const [error, setError] = useState(null);
-  const [url, setUrl] = useState('');
+  const [setUrl] = useState('');
   const [id, setId] = useState('');
 
   useEffect(() => {

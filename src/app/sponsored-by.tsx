@@ -11,52 +11,6 @@ const SPONSORS = [
   "diamond",
 ];
 
-const AnimatedIcon = ({ icon: Icon, delay }: { icon: React.ElementType, delay: number }) => (
-  <motion.div
-    className="absolute text-gray-500 opacity-20"
-    initial={{ scale: 0, rotate: 0 }}
-    animate={{ 
-      scale: [1, 1.2, 1],
-      rotate: [0, 360],
-      y: [0, -20, 0]
-    }}
-    transition={{
-      duration: 5,
-      delay,
-      repeat: Infinity,
-      repeatType: 'loop'
-    }}
-    style={{
-      top: `${Math.random() * 80 + 10}%`,
-      left: `${Math.random() * 80 + 10}%`,
-    }}
-  >
-    <Icon size={48} />
-  </motion.div>
-)
-
-const AnimatedText = ({ text, delay }: { text: string, delay: number }) => (
-  <motion.div
-    className="absolute text-gray-500 opacity-20 font-bold text-2xl"
-    initial={{ opacity: 0 }}
-    animate={{ 
-      opacity: [0.2, 0.5, 0.2],
-      scale: [1, 1.1, 1],
-    }}
-    transition={{
-      duration: 4,
-      delay,
-      repeat: Infinity,
-      repeatType: 'reverse'
-    }}
-    style={{
-      top: `${Math.random() * 80 + 10}%`,
-      left: `${Math.random() * 80 + 10}%`,
-    }}
-  >
-    {text}
-  </motion.div>
-)
 
 export function SponsoredBy() {
   return (

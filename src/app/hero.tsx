@@ -1,7 +1,7 @@
 "use client";
 
-import { IconButton, Button, Typography } from "@material-tailwind/react";
-import { motion, useAnimation } from 'framer-motion';
+import { Button, Typography } from "@material-tailwind/react";
+import { motion } from 'framer-motion';
 function Hero() {
   return (
     
