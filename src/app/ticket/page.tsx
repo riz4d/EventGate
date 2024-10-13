@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const TicketComponent = () => {
   const [ticketData, setTicketData] = useState(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   const [url, setUrl] = useState(''); // eslint-disable-line @typescript-eslint/no-unused-vars
   const [id, setId] = useState('');
 
@@ -31,12 +31,9 @@ const TicketComponent = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(`http://172.20.10.7:80/api/ticket?id=${id}`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
         const data = await response.json();
         setTicketData(data);
-      } catch (error) {
+      } catch (error: any) {
         setError(error.message);
       }
     };
