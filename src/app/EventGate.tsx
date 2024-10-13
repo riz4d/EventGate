@@ -1,84 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { MapPin, Clock, Calendar } from 'lucide-react'
 
-import { Laptop, Code, Lightbulb, Users, Computer, Smartphone, Coffee, Trophy } from 'lucide-react'
-import { Sparkles, Camera, Scissors, MapPin, Clock, Calendar, Palette, Star, Heart, Diamond, Crown, Flag } from 'lucide-react'
-
-const AnimatedIcon = ({ icon: Icon, delay }: { icon: React.ElementType, delay: number }) => (
-  <motion.div
-    className="absolute text-gray-500 opacity-20"
-    initial={{ scale: 0, rotate: 0 }}
-    animate={{ 
-      scale: [1, 1.2, 1],
-      rotate: [0, 360],
-      y: [0, -20, 0]
-    }}
-    transition={{
-      duration: 5,
-      delay,
-      repeat: Infinity,
-      repeatType: 'loop'
-    }}
-    style={{
-      top: `${Math.random() * 80 + 10}%`,
-      left: `${Math.random() * 80 + 10}%`,
-    }}
-  >
-    <Icon size={48} />
-  </motion.div>
-)
-
-const AnimatedText = ({ text, delay }: { text: string, delay: number }) => (
-  <motion.div
-    className="absolute text-gray-500 opacity-20 font-bold text-2xl"
-    initial={{ opacity: 0 }}
-    animate={{ 
-      opacity: [0.2, 0.5, 0.2],
-      scale: [1, 1.1, 1],
-    }}
-    transition={{
-      duration: 4,
-      delay,
-      repeat: Infinity,
-      repeatType: 'reverse'
-    }}
-    style={{
-      top: `${Math.random() * 80 + 10}%`,
-      left: `${Math.random() * 80 + 10}%`,
-    }}
-  >
-    {text}
-  </motion.div>
-)
-const MovingSponsorLogo = ({ src, alt }: { src: string, alt: string }) => {
-  const controls = useAnimation()
-
-  useEffect(() => {
-    controls.start({
-      y: [0, -10, 0],
-      transition: { 
-        duration: 2, 
-        repeat: Infinity, 
-        repeatType: 'reverse' 
-      }
-    })
-  }, [controls])
-
-  return (
-    <motion.img 
-      src={src} 
-      alt={alt} 
-      className="h-12" 
-      animate={controls}
-    />
-  )
-}
 export default function EventRegistrationForm() {
   const [formState, setFormState] = useState({
     fullname: '',
@@ -122,12 +51,9 @@ export default function EventRegistrationForm() {
     }
   };
 
-  const fashionIcons = [Sparkles, Camera, Scissors, Palette, Star, Heart, Diamond, Crown]
-  const fashionTexts = ['Glamour', 'Style', 'Elegance', 'Chic', 'Vogue', 'Trendy', 'Couture', 'Fashion']
-
   return (
     <div className="flex flex-col">
-      <div className="flex-grow flex items-center justify-center relative overflow-hidden py-16 px-4 mt-16"> {/* Add mt-16 here */}
+      <div className="flex-grow flex items-center justify-center relative overflow-hidden py-16 px-4 mt-16">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
