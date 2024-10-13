@@ -21,7 +21,7 @@ const TicketComponent = () => {
       // Extract the id from the URL
       const queryString = currentUrl.split('?')[1];
       const params = new URLSearchParams(queryString);
-      const idValue = params.get('id');
+      const idValue = params.get('id') || ''; // Provide a default value if null
       setId(idValue);
       console.log('ID:', idValue);
     }
