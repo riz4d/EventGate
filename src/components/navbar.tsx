@@ -9,7 +9,6 @@ import {
 import {
   TicketIcon,
   UserGroupIcon,
-  CommandLineIcon,
   InformationCircleIcon,
   XMarkIcon,
   Bars3Icon,
