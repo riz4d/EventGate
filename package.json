@@ -22,6 +22,8 @@
     "qrcode.react": "^4.0.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-phone-number-input": "^3.4.8",
+    "styled-components": "^6.1.13",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {

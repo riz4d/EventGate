@@ -20,10 +20,10 @@ export function SponsoredBy() {
     >
       <section className="py-8 px-8 lg:py-20">
         <div className="container mx-auto text-center">
-          <Typography variant="h5" color="textPrimary" className="mb-8">
+          <Typography variant="h5" color="textPrimary" className="mb-8 font-semibold">
             PARTNERS OF 2024
           </Typography>
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="py-10 flex flex-wrap items-center justify-center gap-6">
             {SPONSORS.map((logo, key) => (
               <Image
                 width={256}
