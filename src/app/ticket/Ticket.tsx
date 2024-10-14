@@ -74,7 +74,7 @@ const TicketComponent = () => {
   }
 
   // Generate QR code data
-  const qrCodeData = JSON.stringify("https://idl-backend.vercel.app/api/ticket?id=" + id);
+  const qrCodeData = JSON.stringify("https://localhost:8000/api/ticket?id=" + id);
 
   return (
     <motion.div>
