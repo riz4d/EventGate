@@ -129,7 +129,7 @@ export default function EventRegistrationForm() {
                 <AlertTriangle className="h-5 w-5 mr-2" />
                 <p className="font-bold">Registration Ending Soon!</p>
               </div>
-              <p className="text-sm">Don't miss out - secure your spot now for the International Designer League 2024.</p>
+              <p className="text-sm">Don&apos;t miss out - secure your spot now for the International Designer League 2024.</p>
             </motion.div>
 
             <motion.h2
