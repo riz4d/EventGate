@@ -7,8 +7,9 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MapPin, Clock, Calendar } from 'lucide-react'
-
+import { Checkbox } from "@/components/ui/checkbox"
 export default function EventRegistrationForm() {
+  const [accepted, setAccepted] = useState(false)
   const [formState, setFormState] = useState({
     fullname: '',
     email: '',
@@ -163,7 +164,16 @@ export default function EventRegistrationForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800">
+           <div className="flex items-center space-x-2 mb-4">
+            <Checkbox id="terms" checked={accepted} onCheckedChange={(checked) => setAccepted(checked === true)} />
+            <label
+              htmlFor="terms"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              I accept the <a href="/terms" className="text-black font-semibold underline">terms and conditions</a>
+            </label>
+          </div>
+            <Button disabled={!accepted} type="submit" className="w-full bg-black text-white hover:bg-gray-800">
               Register
             </Button>
           </motion.div>
