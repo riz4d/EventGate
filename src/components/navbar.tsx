@@ -13,6 +13,7 @@ import {
   XMarkIcon,
   Bars3Icon,
 } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -42,15 +43,17 @@ const NAV_MENU = [
   {
     name: "Get Ticket",
     icon: TicketIcon,
+    href: "./#ticket",
   },
   {
     name: "Partners",
     icon: UserGroupIcon,
+    href: "./#partners",
   },
   {
     name: "About",
     icon: InformationCircleIcon,
-    href: "",
+    href: "/about",
   },
 ];
 
@@ -105,21 +108,31 @@ export function Navbar() {
         </Typography>
         
         <div className="hidden items-center gap-4 lg:flex">
+        <Link href="./#ticket">
           <Button color={isScrolling ? "black" : "white"} variant="text" placeholder=""
         onPointerEnterCapture={() => {}}
         onPointerLeaveCapture={() => {}}>
             Get Ticket
           </Button>
+          </Link>
+          <Link href="./#partners">
           <Button color={isScrolling ? "black" : "white"} variant="text" placeholder=""
         onPointerEnterCapture={() => {}}
         onPointerLeaveCapture={() => {}}>
             Partners
           </Button>
-          <Button color={isScrolling ? "black" : "white"} variant="text" placeholder=""
-        onPointerEnterCapture={() => {}}
-        onPointerLeaveCapture={() => {}}>
-            About
-          </Button>
+          </Link>
+            <Link href="/about">
+              <Button
+                color={isScrolling ? "black" : "white"}
+                variant="text"
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
+              >
+                About
+              </Button>
+            </Link>
         </div>
         <IconButton
           variant="text"
