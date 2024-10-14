@@ -18,7 +18,7 @@ export function SponsoredBy() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="py-8 px-8 lg:py-20">
+      <section className="py-8 px-8 lg:py-20" id="partners">
         <div className="container mx-auto text-center">
           <Typography variant="h5" color="textPrimary" className="mb-8 font-semibold">
             PARTNERS OF 2024
