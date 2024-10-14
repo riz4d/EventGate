@@ -1,4 +1,4 @@
-import { Typography, IconButton } from "@material-tailwind/react";
+import { IconButton } from "@material-tailwind/react";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -16,12 +16,12 @@ export function Footer() {
             International Designer League
           </a>
           
-          <Typography
-            color="blue-gray"
-            className="flex justify-center text-sm my-4 md:my-0 w-max mx-auto items-center gap-4"
+          <div
+            className="flex justify-center text-sm my-4 md:my-0 w-max mx-auto items-center gap-4 text-blue-gray-500"
           >
             &copy; {CURRENT_YEAR} copyright rizad. All rights reserved
-          </Typography>
+          </div>
+          
           <div className="flex w-fit justify-center gap-2">
             <IconButton size="sm" color="gray" variant="text">
               <i className="fa-brands fa-twitter text-lg" />
