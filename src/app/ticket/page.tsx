@@ -39,7 +39,7 @@ const TicketComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://172.20.10.7:80/api/ticket?id=${id}`);
+        const response = await fetch(`http://idl-backend.vercel.app/api/ticket?id=${id}`);
         const data: TicketData = await response.json();
         setTicketData(data);
       } catch (error) {
