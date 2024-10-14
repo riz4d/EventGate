@@ -157,6 +157,7 @@ export default function EventRegistrationForm() {
                 </div>
               </div>
             </motion.div>
+            <p>It&apos;s a great day!</p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
