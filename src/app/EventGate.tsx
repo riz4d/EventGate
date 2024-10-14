@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MapPin, Clock, Calendar, AlertTriangle } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox"
+
 export default function EventRegistrationForm() {
   const [accepted, setAccepted] = useState(false)
   const [formState, setFormState] = useState({
@@ -65,7 +66,7 @@ export default function EventRegistrationForm() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="bg-gray-200 border-l-4 border-pink-500 text-pink-900 p-4 mb-6 rounded"
+            className="bg-gray-200 border-l-4 border-ppink-500 text-pink-900 p-4 mb-6 rounded"
             role="alert"
           >
             <div className="flex items-center">
@@ -99,6 +100,7 @@ export default function EventRegistrationForm() {
                 </div>
               </div>
         </motion.div>
+        <p>It&apos;s a great day!</p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
