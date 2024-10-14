@@ -122,7 +122,7 @@ export default function EventRegistrationForm() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6 rounded"
+              className="bg-gray-200 border-l-4 border-pink-500 text-pink-700 p-4 mb-6 rounded"
               role="alert"
             >
               <div className="flex items-center">
