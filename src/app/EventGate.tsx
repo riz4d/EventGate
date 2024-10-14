@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { MapPin, Clock, Calendar } from 'lucide-react'
+import { MapPin, Clock, Calendar, AlertTriangle } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox"
 export default function EventRegistrationForm() {
   const [accepted, setAccepted] = useState(false)
@@ -61,6 +61,19 @@ export default function EventRegistrationForm() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-2xl p-8 space-y-8 bg-white rounded-lg shadow-2xl"
         >
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="bg-gray-200 border-l-4 border-pink-500 text-pink-900 p-4 mb-6 rounded"
+            role="alert"
+          >
+            <div className="flex items-center">
+              <AlertTriangle className="h-5 w-5 mr-2" />
+              <p className="font-bold">Registration Ending Soon!</p>
+            </div>
+            <p className="text-sm">Don't miss out - secure your spot now for the International Designer League 2024.</p>
+          </motion.div>
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
