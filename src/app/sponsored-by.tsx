@@ -29,7 +29,7 @@ export function SponsoredBy() {
                 width={256}
                 height={256}
                 key={key}
-                src={`/images/${logo}.png`}
+                src={`/logos/logo-${logo}.png`}
                 alt={`${logo} logo`}
               />
             ))}

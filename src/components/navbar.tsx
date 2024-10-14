@@ -28,6 +28,9 @@ function NavItem({ children, href }: NavItemProps) {
         target={href ? "_blank" : "_self"}
         variant="paragraph"
         className="flex items-center gap-2 font-medium"
+        placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}
       >
         {children}
       </Typography>
@@ -85,23 +88,36 @@ export function Navbar() {
       blurred={true}
       color={isScrolling ? "white" : "transparent"} // Change this to your desired solid color
       className="fixed top-0 z-50 border-0"
+      placeholder=""
+      onPointerEnterCapture={() => {}}
+      onPointerLeaveCapture={() => {}}
+      
     >
       <div className="container mx-auto flex items-center justify-between">
         <Typography
           color={isScrolling ? "black" : "white"}
           className="text-lg font-bold"
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
         >
           IDLeague
         </Typography>
         
         <div className="hidden items-center gap-4 lg:flex">
-          <Button color={isScrolling ? "black" : "white"} variant="text">
+          <Button color={isScrolling ? "black" : "white"} variant="text" placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}>
             Get Ticket
           </Button>
-          <Button color={isScrolling ? "black" : "white"} variant="text">
+          <Button color={isScrolling ? "black" : "white"} variant="text" placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}>
             Partners
           </Button>
-          <Button color={isScrolling ? "black" : "white"} variant="text">
+          <Button color={isScrolling ? "black" : "white"} variant="text" placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}>
             About
           </Button>
         </div>
@@ -110,6 +126,9 @@ export function Navbar() {
           color={isScrolling ? "black" : "white"}
           onClick={handleOpen}
           className="ml-auto inline-block lg:hidden"
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
         >
           {open ? (
             <XMarkIcon strokeWidth={2} className="h-6 w-6" />
