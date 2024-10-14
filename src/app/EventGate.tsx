@@ -110,7 +110,7 @@ export default function EventRegistrationForm() {
   return (
     <>
       <GlobalPhoneInputStyles />
-      <div className="flex flex-col">
+      <div className="flex flex-col" id='ticket'>
         <div className="flex-grow flex items-center justify-center relative overflow-hidden py-16 px-4 mt-16">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
