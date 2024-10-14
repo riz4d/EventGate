@@ -1,4 +1,4 @@
-import { IconButton } from "@material-tailwind/react";
+import IconButton from "@material-tailwind/react/components/IconButton";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -23,13 +23,24 @@ export function Footer() {
           </div>
           
           <div className="flex w-fit justify-center gap-2">
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton 
+              size="sm" 
+              color="gray" 
+              variant="text" 
+              placeholder="" 
+              onPointerEnterCapture={() => {}} 
+              onPointerLeaveCapture={() => {}}>
               <i className="fa-brands fa-twitter text-lg" />
             </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton size="sm" color="gray" variant="text"
+              placeholder=""
+              onPointerEnterCapture={() => {}} 
+              onPointerLeaveCapture={() => {}}>
               <i className="fa-brands fa-facebook text-lg" />
             </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton size="sm" color="gray" variant="text" placeholder=""
+              onPointerEnterCapture={() => {}} 
+              onPointerLeaveCapture={() => {}}>
               <i className="fa-brands fa-instagram text-lg" />
             </IconButton>
           </div>
