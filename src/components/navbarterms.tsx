@@ -104,7 +104,7 @@ export function Navbarterms() {
           onPointerEnterCapture={() => {}}
           onPointerLeaveCapture={() => {}}
         >
-          IDLeague
+          EventGate
         </Typography>
         
         <div className="hidden items-center gap-4 lg:flex">
