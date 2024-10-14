@@ -104,7 +104,7 @@ export function Navbar() {
           onPointerEnterCapture={() => {}}
           onPointerLeaveCapture={() => {}}
         >
-          IDLeague
+          EventGate
         </Typography>
         
         <div className="hidden items-center gap-4 lg:flex">
@@ -131,6 +131,17 @@ export function Navbar() {
                 onPointerLeaveCapture={() => {}}
               >
                 About
+              </Button>
+            </Link>
+            <Link href="https://github.com/riz4d">
+              <Button
+                color={isScrolling ? "black" : "white"}
+                variant="text"
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
+              >
+                Github Repo
               </Button>
             </Link>
         </div>
