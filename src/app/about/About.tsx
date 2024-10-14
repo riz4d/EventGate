@@ -12,7 +12,7 @@ export default function AboutUs() {
   const faqData = [
     {
       question: "What is EventGate?",
-      answer: "EventGate is a virtual event platform that allows you to host and attend events from anywhere in the world. It's open-source and designed to provide a seamless event experience."
+      answer: "EventGate is a virtual event platform that allows you to host and attend events from anywhere in the world. It&apos;s open-source and designed to provide a seamless event experience."
     },
     {
       question: "How can I host an event on EventGate?",
@@ -32,7 +32,7 @@ export default function AboutUs() {
     },
     {
       question: "How do I join an event on EventGate?",
-      answer: "To join an event, simply visit the event page and click on the 'Join' button. If the event requires registration, make sure to register beforehand to receive the event link."
+      answer: "To join an event, simply visit the event page and click on the &apos;Join&apos; button. If the event requires registration, make sure to register beforehand to receive the event link."
     },
     {
       question: "Is there a limit to the number of attendees for an event?",
@@ -70,7 +70,7 @@ export default function AboutUs() {
           <CardContent className="p-6 bg-gray-50 rounded-lg shadow-xl">
             <h2 className="text-2xl font-bold mb-4">EventGate</h2>
             <p className="text-gray-600 mb-4">
-              EventGate is a virtual event platform that allows you to host and attend events from anywhere in the world. It's open-source and designed to provide a seamless event experience.
+              EventGate is a virtual event platform that allows you to host and attend events from anywhere in the world. It&apos;s open-source and designed to provide a seamless event experience.
             </p>
           </CardContent>
         </Card>
