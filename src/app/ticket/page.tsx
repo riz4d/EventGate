@@ -8,6 +8,10 @@ import { motion } from 'framer-motion';
 
 interface TicketData {
   eventName: string;
+  fullname: string;
+  email: string;
+  attendeeType: string;
+  userId: string;
   // Add other properties as needed
 }
 
