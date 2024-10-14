@@ -28,7 +28,7 @@ export default function EventRegistrationForm() {
     console.log('Form submitted:', formState);
 
     try {
-      const response = await fetch('http://172.20.10.7:80/ticket', {
+      const response = await fetch('http://idl-backend.vercel.app/ticket', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
