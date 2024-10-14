@@ -84,7 +84,7 @@ export default function EventRegistrationForm() {
     console.log('Form submitted:', formState);
 
     try {
-      const response = await fetch('https://idl-backend.vercel.app/ticket', {
+      const response = await fetch('http://localhost:5000/api/ticket?id=${id}', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ export default function EventRegistrationForm() {
                 <AlertTriangle className="h-5 w-5 mr-2" />
                 <p className="font-bold">Registration Ending Soon!</p>
               </div>
-              <p className="text-sm">Don&apos;t miss out - secure your spot now for the International Designer League 2024.</p>
+              <p className="text-sm">Don&apos;t miss out - secure your spot now for the EventGate.</p>
             </motion.div>
 
             <motion.h2
@@ -138,14 +138,14 @@ export default function EventRegistrationForm() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="text-3xl font-bold text-center text-gray-900"
             >
-              International Designer League 2024
+              EventGate
             </motion.h2>
 
             <motion.div>
               <div className="space-y-2 text-black">
                 <div className="flex items-center">
                   <MapPin className="mr-2 h-5 w-5 text-black" />
-                  <span>Radisson RED Hotel Dubai Silicon Oasis</span>
+                  <span>Newyork</span>
                 </div>
                 <div className="flex items-center">
                   <Calendar className="mr-2 h-5 w-5 text-black" />

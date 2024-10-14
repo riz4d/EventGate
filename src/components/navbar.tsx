@@ -46,9 +46,9 @@ const NAV_MENU = [
     href: "./#ticket",
   },
   {
-    name: "Partners",
+    name: "terms",
     icon: UserGroupIcon,
-    href: "./#partners",
+    href: "/terms",
   },
   {
     name: "About",
@@ -115,11 +115,11 @@ export function Navbar() {
             Get Ticket
           </Button>
           </Link>
-          <Link href="./#partners">
+          <Link href="/terms">
           <Button color={isScrolling ? "black" : "white"} variant="text" placeholder=""
         onPointerEnterCapture={() => {}}
         onPointerLeaveCapture={() => {}}>
-            Partners
+            Terms
           </Button>
           </Link>
             <Link href="/about">

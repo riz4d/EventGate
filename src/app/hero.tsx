@@ -22,7 +22,7 @@ function Hero() {
               onPointerEnterCapture={() => {}}
               onPointerLeaveCapture={() => {}}
             >
-              International Designer League 2024
+              EventGate
             </Typography>
             <Typography
               variant="lead"
@@ -32,7 +32,7 @@ function Hero() {
               onPointerEnterCapture={() => {}}
               onPointerLeaveCapture={() => {}}
             >
-              Join us for the most anticipated event of the year
+              EventGate is a virtual event platform that allows you to host and attend events from anywhere in the world.
             </Typography>
           </motion.div>
           <motion.div

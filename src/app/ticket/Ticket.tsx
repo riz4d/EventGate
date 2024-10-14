@@ -6,6 +6,7 @@ import { CalendarDays, Clock, MapPin, User, Mail, UserCheck, Ticket } from "luci
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+// Define the interface for the ticket data
 interface TicketData {
   eventName: string;
   fullname: string;
@@ -16,11 +17,16 @@ interface TicketData {
 }
 
 const TicketComponent = () => {
+  // State to store ticket data
   const [ticketData, setTicketData] = useState<TicketData | null>(null);
+  // State to store any error messages
   const [error, setError] = useState<string | null>(null);
+  // State to store the current URL
   const [url, setUrl] = useState(''); // eslint-disable-line @typescript-eslint/no-unused-vars
+  // State to store the extracted ID from the URL
   const [id, setId] = useState('');
 
+  // Effect to extract the current URL and ID from the URL
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const currentUrl = window.location.href;
@@ -36,10 +42,11 @@ const TicketComponent = () => {
     }
   }, []);
 
+  // Effect to fetch ticket data based on the extracted ID
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://idl-backend.vercel.app/api/ticket?id=${id}`);
+        const response = await fetch(`http://localhost:5000/api/ticket?id=${id}`);
         const data: TicketData = await response.json();
         setTicketData(data);
       } catch (error) {
@@ -56,14 +63,17 @@ const TicketComponent = () => {
     }
   }, [id]);
 
+  // Display error message if any
   if (error) {
     return <div>Error: {error}</div>;
   }
 
+  // Display loading message while fetching data
   if (!ticketData) {
     return <div>Loading...</div>;
   }
 
+  // Generate QR code data
   const qrCodeData = JSON.stringify("https://idl-backend.vercel.app/api/ticket?id=" + id);
 
   return (
@@ -113,7 +123,7 @@ const TicketComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center space-y-4">
+              <div className="flex flex-col items-center justify-center space-y-4"></div>
                 <h2 className="text-2xl font-semibold text-foreground text-center">Your Virtual Ticket QR Code</h2>
                 <QRCodeSVG value={qrCodeData} size={200} />
                 <p className="text-sm text-muted-foreground text-center">

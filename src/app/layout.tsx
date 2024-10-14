@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Event Gate",
-  description: "Register here",
+  description: "EventGate is a virtual event platform that allows you to host and attend events from anywhere in the world.",
 };
 
 export default function RootLayout({

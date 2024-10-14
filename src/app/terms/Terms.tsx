@@ -29,55 +29,76 @@ export default function Component() {
   }
 
 const sections = [
-    {
-        title: "1. Participation",
-        items: [
-            "All participants must be at least 18 years old.",
-            "Participants must adhere to the dress code specified for each event.",
-            "The league reserves the right to disqualify any participant for misconduct."
-        ]
-    },
-    {
-        title: "2. Non-Transferable",
-        items: [
-            "This ticket is exclusively for your use and may not be transferred or shared with others."
-        ]
-    },
-    {
-        title: "3. Arrival Time",
-        items: [
-            "Please ensure you arrive at the check-in desk at least 45 minutes before the scheduled show time to secure your allocated seat.",
-            "Admission will not be granted once check-in is closed."
-        ]
-    },
-    {
-        title: "4. Attendance Monitoring",
-        items: [
-            "Your ticket is monitored via QR Code and AI learning technology.",
-            "Failure to attend after confirming your seat may result in the inability to attend future shows."
-        ]
-    },
-    {
-        title: "5. Dress Code",
-        items: [
-            "Dress in unique street-wear or elegant attire.",
-            "Evening gowns are not permitted."
-        ]
-    },
-    {
-        title: "6. Check-In",
-        items: [
-            "Present this ticket upon check-in."
-        ]
-    },
-    {
-        title: "7. Media Recording and Broadcasting",
-        items: [
-            "By accepting this ticket, you acknowledge and agree that the event may be filmed and broadcasted on various channels and shows.",
-            "Your presence at the event implies your consent to be filmed, and you grant the organizers the right to use your image, likeness, and voice in any broadcast, promotional, or marketing materials related to the event.",
-            "If you do not wish to be filmed, please notify the event staff upon check-in."
-        ]
-    }
+  {
+    title: "1. Acceptance of Terms",
+    items: [
+      "By accessing and using EventGate, you agree to comply with and be bound by these terms and conditions.",
+      "If you do not agree with any part of these terms, you must not use EventGate."
+    ]
+  },
+  {
+    title: "2. User Accounts",
+    items: [
+      "You must create an account to access certain features of EventGate.",
+      "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account."
+    ]
+  },
+  {
+    title: "3. Event Hosting",
+    items: [
+      "Event hosts are responsible for the content and conduct of their events.",
+      "EventGate reserves the right to remove any event that violates our policies or terms of service."
+    ]
+  },
+  {
+    title: "4. Event Attendance",
+    items: [
+      "Attendees must comply with the event rules and guidelines set by the event host.",
+      "EventGate is not responsible for any issues arising from the content or conduct of events hosted on the platform."
+    ]
+  },
+  {
+    title: "5. Payment and Refunds",
+    items: [
+      "All payments for events are processed through our secure payment gateway.",
+      "Refunds are subject to the event host's refund policy and EventGate's terms of service."
+    ]
+  },
+  {
+    title: "6. Privacy and Data Protection",
+    items: [
+      "We are committed to protecting your privacy and personal data.",
+      "Please refer to our Privacy Policy for more information on how we collect, use, and protect your data."
+    ]
+  },
+  {
+    title: "7. Intellectual Property",
+    items: [
+      "All content on EventGate, including text, graphics, logos, and software, is the property of EventGate or its content suppliers and is protected by intellectual property laws.",
+      "You may not use, reproduce, or distribute any content from EventGate without our prior written permission."
+    ]
+  },
+  {
+    title: "8. Limitation of Liability",
+    items: [
+      "EventGate is not liable for any direct, indirect, incidental, or consequential damages arising from your use of the platform.",
+      "Our liability is limited to the maximum extent permitted by law."
+    ]
+  },
+  {
+    title: "9. Changes to Terms",
+    items: [
+      "We reserve the right to modify these terms and conditions at any time.",
+      "Any changes will be effective immediately upon posting on EventGate. Your continued use of the platform constitutes your acceptance of the revised terms."
+    ]
+  },
+  {
+    title: "10. Governing Law",
+    items: [
+      "These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction in which EventGate operates.",
+      "Any disputes arising from these terms will be subject to the exclusive jurisdiction of the courts in that jurisdiction."
+    ]
+  }
 ]
 
   return (
@@ -91,7 +112,7 @@ const sections = [
               transition={{ duration: 0.5 }}
               className="flex items-center justify-center"
             >
-              International Designer League
+              EventGate
             </motion.div>
           </CardTitle>
           <CardDescription className="text-center text-lg">

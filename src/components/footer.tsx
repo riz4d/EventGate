@@ -1,5 +1,5 @@
 import IconButton from "@material-tailwind/react/components/IconButton";
-
+import Link from "next/link";
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
@@ -9,11 +9,11 @@ export function Footer() {
         
         <div className="flex flex-col md:flex-row items-center !justify-between">
           <a
-            href="https://www.material-tailwind.com"
+            href="https://github.com/riz4d"
             target="_blank"
             className="text-gray-900 text-lg font-semibold"
           >
-            International Designer League
+            EventGate
           </a>
           
           <div
@@ -23,6 +23,7 @@ export function Footer() {
           </div>
           
           <div className="flex w-fit justify-center gap-2">
+          <Link href="https://github.com/riz4d">
             <IconButton 
               size="sm" 
               color="gray" 
@@ -30,19 +31,24 @@ export function Footer() {
               placeholder="" 
               onPointerEnterCapture={() => {}} 
               onPointerLeaveCapture={() => {}}>
-              <i className="fa-brands fa-twitter text-lg" />
+              <i className="fa-brands fa-github text-lg" />
             </IconButton>
+            </Link>
+            <Link href="https://www.linkedin.com/in/mohamedrizad/">
             <IconButton size="sm" color="gray" variant="text"
               placeholder=""
               onPointerEnterCapture={() => {}} 
               onPointerLeaveCapture={() => {}}>
-              <i className="fa-brands fa-facebook text-lg" />
+              <i className="fa-brands fa-linkedin text-lg" />
             </IconButton>
+            </Link>
+            <Link href="https://instagram.com/riz.4d">
             <IconButton size="sm" color="gray" variant="text" placeholder=""
               onPointerEnterCapture={() => {}} 
               onPointerLeaveCapture={() => {}}>
               <i className="fa-brands fa-instagram text-lg" />
             </IconButton>
+            </Link>
           </div>
         </div>
       </div>

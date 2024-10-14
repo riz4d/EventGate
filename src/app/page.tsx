@@ -1,6 +1,5 @@
 
-import EventGate from "./EventGate"
-import SponsoredBy from "./sponsored-by";
+import EventGate from "./EventGate";
 import { Navbar, Footer } from "@/components";
 import Hero from "./hero";
 
@@ -10,7 +9,6 @@ export default function Home() {
     <Hero/>
     <Navbar />
     <EventGate/>
-    <SponsoredBy/>
     <Footer/>
     </>
   );

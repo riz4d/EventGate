@@ -11,36 +11,36 @@ export default function AboutUs() {
 
   const faqData = [
     {
-      question: "What is the International Designer League (IDL)",
-      answer: "an exclusive platform that brings together emerging and renowned fashion designers from around the world to showcase their creativity and collections. This event offers designers a chance to gain international exposure, collaborate with industry professionals, and reach a global audience."
+      question: "What is EventGate?",
+      answer: "EventGate is a virtual event platform that allows you to host and attend events from anywhere in the world. It's open-source and designed to provide a seamless event experience."
     },
     {
-      question: "What is the date of the event?",
-      answer: "The event is scheduled for November 16th, 2024."
+      question: "How can I host an event on EventGate?",
+      answer: "To host an event on EventGate, you need to create an account, set up your event details, and publish it. You can customize your event page and manage registrations through the platform."
     },
     {
-      question: "What time does the event start?",
-      answer: "Guest entry begins at 6:30 PM. The show starts at 7:00 PM."
+      question: "Is EventGate free to use?",
+      answer: "Yes, EventGate is open-source and free to use. However, there may be additional costs if you choose to use third-party services or integrations."
     },
     {
-      question: "When is the last date for designer registration?",
-      answer: "The last date to register as a designer is November 10th, 2024."
+      question: "Can I attend events without an account?",
+      answer: "Yes, you can attend public events without an account. However, creating an account allows you to register for events, receive updates, and access additional features."
     },
     {
-      question: "How can I register as a designer?",
-      answer: "You can register as a designer via the official portal. (Include the link here)."
+      question: "What types of events can I host on EventGate?",
+      answer: "You can host a wide range of events on EventGate, including conferences, webinars, workshops, meetups, and more. The platform is flexible and can be tailored to suit different event types."
     },
     {
-      question: "What is the dress code for guests?",
-      answer: "There is no official dress code, but attendees are encouraged to dress fashionably for the occasion."
+      question: "How do I join an event on EventGate?",
+      answer: "To join an event, simply visit the event page and click on the 'Join' button. If the event requires registration, make sure to register beforehand to receive the event link."
     },
     {
-      question: "Will there be any special guests or celebrity appearances?",
-      answer: "Yes, there will be special guests and celebrities, but details will be revealed closer to the event date."
+      question: "Is there a limit to the number of attendees for an event?",
+      answer: "EventGate does not impose a limit on the number of attendees. However, the capacity may be influenced by the technical limitations of the hosting infrastructure."
     },
     {
-      question: "Are tickets required to attend the event?",
-      answer: "Yes, tickets are required for guest entry. Ticket details and prices can be found on the event portal. (Include the link here)."
+      question: "Can I integrate EventGate with other tools?",
+      answer: "Yes, EventGate supports integrations with various third-party tools and services to enhance your event experience. Check the documentation for available integrations and setup instructions."
     }
   ]
 
@@ -68,12 +68,9 @@ export default function AboutUs() {
       >
         <Card>
           <CardContent className="p-6 bg-gray-50 rounded-lg shadow-xl">
-            <h2 className="text-2xl font-bold mb-4">The Fashion League Event</h2>
+            <h2 className="text-2xl font-bold mb-4">EventGate</h2>
             <p className="text-gray-600 mb-4">
-              The Indian Designer League (IDL) is a prominent fashion event that showcases both established and emerging designers, primarily from India. It provides a platform for designers to present their collections to a wide audience, including fashion enthusiasts, buyers, media, and influencers.
-            </p>
-            <p className="text-gray-600">
-            The event focuses on promoting the Indian fashion industry on an international stage, highlighting the rich diversity of Indian fashion, from traditional attire to modern and fusion designs.IDL typically features runway shows, fashion exhibitions, and networking opportunities, making it a key event in the South Asian fashion calendar. It aims to create a global presence for Indian designers and connect them with global markets and trends.
+              EventGate is a virtual event platform that allows you to host and attend events from anywhere in the world. It's open-source and designed to provide a seamless event experience.
             </p>
           </CardContent>
         </Card>
