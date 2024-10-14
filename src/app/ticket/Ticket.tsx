@@ -74,7 +74,7 @@ const TicketComponent = () => {
   }
 
   // Generate QR code data
-  const qrCodeData = JSON.stringify("https://idl-backend.vercel.app/api/ticket?id=" + id);
+  const qrCodeData = JSON.stringify("https://localhost:8000/api/ticket?id=" + id);
 
   return (
     <motion.div>
@@ -123,7 +123,7 @@ const TicketComponent = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center space-y-4"></div>
+              <div className="flex flex-col items-center justify-center space-y-4">
                 <h2 className="text-2xl font-semibold text-foreground text-center">Your Virtual Ticket QR Code</h2>
                 <QRCodeSVG value={qrCodeData} size={200} />
                 <p className="text-sm text-muted-foreground text-center">
