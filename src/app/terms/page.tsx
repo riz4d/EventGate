@@ -2,13 +2,10 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Scissors } from 'lucide-react'
-import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
-import { Checkbox } from "@/components/ui/checkbox"
+
 
 export default function Component() {
-  const [accepted, setAccepted] = useState(false)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -123,32 +120,7 @@ const sections = [
           </motion.div>
         </CardContent>
       </Card>
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
-      >
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-pink-200 rounded-full"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            animate={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              repeatType: 'reverse',
-            }}
-          />
-        ))}
-      </motion.div>
+      
     </div>
   )
 }
